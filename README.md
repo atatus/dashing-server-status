@@ -8,10 +8,17 @@ This is a [Dashing](http://shopify.github.com/dashing) widget to checks whether 
 
 ## Usage
 
-1. copy `server_status.coffee`, `server_status.html`, and `server_status.scss` into the `/widgets/server_status` directory of your Dashing app.
+1. Copy `server_status.coffee`, `server_status.html`, and `server_status.scss` into the `/widgets/server_status` directory of your Dashing app.
 
 2. Copy the `server_status.rb` file into your `/jobs` folder.
 
+3. In the `server_status.rb`, update your server information
+
+```
+servers = [{name: 'server1', url: 'https://www.test.com', method: 'http'},
+        {name: 'server2', url: 'https://www.test2.com', method: 'http'},
+        {name: 'server3', url: '192.168.0.1', method: 'ping'}]
+```
 
 To include the widget in a dashboard, add the following snippet to the dashboard layout file:
 
